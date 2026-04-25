@@ -1,0 +1,9 @@
+Revision history for RT-Extension-Public-Holidays
+
+1.0.0  2026-04-25
+        - Initial release
+        - Login page holiday banner with flag emoji, type icons, and descriptions
+        - TodaysHolidays dashboard widget, auto-registered via HomepageComponents
+        - ~280 worldwide holidays from 100+ countries
+        - Bootstrap 5 CSS variable theming (Elevator light/dark, KN theme)
+        - Configurable CSV path via $HolidaysCSVPath

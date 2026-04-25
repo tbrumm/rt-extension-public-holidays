@@ -2,6 +2,8 @@
 use POSIX qw(strftime);
 
 my $today    = strftime( "%m-%d", localtime );
+my $today_display = strftime( "%B %d, %Y", localtime );
+$today_display =~ s/ 0(\d),/ $1,/;    # "April 05" → "April 5"
 my $csv_path = RT->Config->Get('HolidaysCSVPath')
               || $RT::LocalEtcPath . '/holidays-worldwide.csv';
 my @found;
@@ -367,6 +369,11 @@ sub _hol_csv_parse {
     padding: 0.3rem 0.85rem 0.3rem 0.65rem;
     margin-bottom: 0.75rem;
 }
+.kn-hol-heading-date {
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    opacity: 0.72;
+}
 .kn-hol-card {
     background: #002244;
     border: 1px solid rgba(0, 118, 190, 0.40);
@@ -454,7 +461,7 @@ sub _hol_csv_parse {
 </style>
 
 <div id="kn-holiday-banner">
-  <div class="kn-hol-heading">&#x1F5D3;&#xFE0F;&nbsp; Today's Holidays</div>
+  <div class="kn-hol-heading">&#x1F5D3;&#xFE0F;&nbsp; Today's Holidays <span class="kn-hol-heading-date">&mdash; <% $today_display | h %></span></div>
 % for my $h (@found) {
 %   my $icon     = $TYPE_ICON{ $h->{type} }  // '&#x1F389;';
 %   my $color    = $TYPE_COLOR{ $h->{type} } // '#FFD100';

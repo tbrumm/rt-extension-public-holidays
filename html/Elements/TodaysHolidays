@@ -5,6 +5,8 @@ $HasResults => undef
 use POSIX qw(strftime);
 
 my $today    = strftime( "%m-%d", localtime );
+my $today_display = strftime( "%B %d, %Y", localtime );
+$today_display =~ s/ 0(\d),/ $1,/;    # "April 05" → "April 5"
 my $csv_path = RT->Config->Get('HolidaysCSVPath')
               || $RT::LocalEtcPath . '/holidays-worldwide.csv';
 my @found;
@@ -222,7 +224,7 @@ sub _hol_w_csv_parse {
 }
 </%init>
 <&|/Widgets/TitleBox,
-    title     => loc("Today's Holidays"),
+    title     => loc("Today's Holidays") . " \x{2014} $today_display",
     class     => 'todays-holidays fullwidth',
     bodyclass => '',
 &>

@@ -1,14 +1,14 @@
-NAME
-    RT::Extension::PublicHolidays - Display global Public Holidays in RT
+# RT::Extension::PublicHolidays - Display global Public Holidays in RT
 
-DESCRIPTION
+## DESCRIPTION
     This extension add a Widget for your Dashboards and also a tiny Area
     on your RTs Login Page displaying actual public holidays around the world
 
-RT VERSION
+## RT VERSION
     Works with RT 6.0
 
-INSTALLATION
+## INSTALLATION
+```bash
     perl Makefile.PL
     make
     make install
@@ -23,14 +23,15 @@ INSTALLATION
             rm -rf /opt/rt6/var/mason_data/obj
 
     Restart your webserver
+```
 
-CONFIGURATION
+## CONFIGURATION
     Will be explained later...
 
-AUTHOR
+## AUTHOR
     Torsten Brumm https://www.systemaniacs.de/ <technik@picturepunxx.de>
 
-LICENSE AND COPYRIGHT
+## LICENSE AND COPYRIGHT
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
 

@@ -13,6 +13,12 @@ The extension can display current and upcoming public holidays from around the w
 
 This is useful for support teams, service desks, global operations teams, and organizations that need quick visibility into public holidays across multiple countries or regions.
 
+## Screenshots
+
+### Login Page Widget
+
+![RT Public Holidays Login Widget](images/Login.png)
+
 ## RT Version
 
 Tested with:

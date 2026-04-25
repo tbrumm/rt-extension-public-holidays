@@ -1,6 +1,6 @@
 # RT-Extension-Public-Holidays
 
-Displays today's worldwide public holidays on the **RT login page** and as a **dashboard widget**, with country flags, type icons, and descriptions. Supports all RT themes (Elevator light/dark, KN theme, and others) through Bootstrap CSS variables.
+Displays today's worldwide public holidays on the **RT login page** and as a **dashboard widget**, with country flags, type icons, and descriptions. Supports all RT themes (Elevator light/dark, Terminal theme, and others) through Bootstrap CSS variables.
 
 ## Features
 

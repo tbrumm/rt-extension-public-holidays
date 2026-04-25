@@ -15,9 +15,13 @@ This is useful for support teams, service desks, global operations teams, and or
 
 ## Screenshots
 
-### Login Page Widget
+### Login Page 
 
-![RT Public Holidays Login Widget](images/Login.png)
+![RT Public Holidays Login](images/Login.png)
+
+### Dashboard Widget
+
+![RT Public Holidays Dashboard](images/Widget.png)
 
 ## RT Version
 

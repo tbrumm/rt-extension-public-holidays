@@ -223,6 +223,7 @@ sub _hol_w_csv_parse {
     return @fields;
 }
 </%init>
+% if ( @found ) {
 <&|/Widgets/TitleBox,
     title     => loc("Today's Holidays") . " \x{2014} $today_display",
     class     => 'todays-holidays fullwidth',
@@ -311,9 +312,6 @@ sub _hol_w_csv_parse {
 }
 </style>
 
-% if ( !@found ) {
-<p class="kn-hol-w-none">No holidays today.</p>
-% } else {
 %   for my $h (@found) {
 %     my $icon      = $TYPE_ICON{ $h->{type} }  // '&#x1F389;';
 %     my $color     = $TYPE_COLOR{ $h->{type} } // '#0076BE';
@@ -342,5 +340,5 @@ sub _hol_w_csv_parse {
 %   }
   </div>
 %   }
-% }
 </&>
+% }

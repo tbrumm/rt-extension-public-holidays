@@ -3,7 +3,7 @@ use warnings;
 
 package RT::Extension::PublicHolidays;
 
-our $VERSION = '1.0.0';
+our $VERSION = '1.0';
 
 # Register the dashboard widget automatically when the plugin is loaded
 {

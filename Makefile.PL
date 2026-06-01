@@ -1,18 +1,17 @@
-use strict;
-use warnings;
+use lib '.';
+
 use inc::Module::Install;
 
-RTx('RT-Extension-Public-Holidays');
+version '1.0';
+license 'gpl_2';
+author  'Torsten Brumm';
 
-license('gpl_2');
-author('Torsten Brumm');
-version_from('lib/RT/Extension/PublicHolidays.pm');
+RTx 'RT-Extension-PublicHolidays';
 
-requires_rt('5.0.0');
-rt_too_new('7.0.0');
+requires_rt '6.0.0';
+rt_too_new  '7.0.0';
 
-requires('POSIX');
+requires 'POSIX';
 
-auto_manifest();
-sign(0);
-WriteAll();
+sign;
+WriteAll;
